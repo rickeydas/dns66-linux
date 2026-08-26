@@ -1,0 +1,13 @@
+[Unit]
+Description=DNS66 Linux Client - DNS Proxy
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/env python3 /opt/dns66-client/dns_proxy.py
+Restart=on-failure
+User=root
+WorkingDirectory=/opt/dns66-client
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=DNS66 Tray Indicator
+Comment=System tray indicator for DNS66 Client
+Exec=python3 /opt/dns66-client/tray.py
+Terminal=false
+Categories=Network;
+NoDisplay=true
+X-GNOME-Autostart-enabled=true

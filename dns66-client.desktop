@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=DNS66 Client for Linux
+Comment=System-wide DNS Proxy and Adblocker
+Exec=/usr/bin/python3 /opt/dns66-client/ui.py
+Icon=dns66-client
+Terminal=false
+Type=Application
+Categories=Network;Settings;

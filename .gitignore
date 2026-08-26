@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Debian packaging artifacts
+dns66-client_*_all/
+
+# Application runtime files
+cache/
+ad_domains.json
+
+# IDE / temp files
+.DS_Store
