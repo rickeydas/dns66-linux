@@ -11,7 +11,7 @@ const AdblockTester = () => {
     // We dynamically create a script tag to load our bait file.
     // Adblockers usually block scripts named "dummy-ad.js" or similar.
     const script = document.createElement('script');
-    script.src = '/dummy-ad.js?bypassCache=' + new Date().getTime();
+    script.src = import.meta.env.BASE_URL + 'dummy-ad.js?bypassCache=' + new Date().getTime();
     script.async = true;
 
     script.onload = () => {
