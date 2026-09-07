@@ -61,17 +61,21 @@ function App() {
 
         <section className="glass-panel" style={{ textAlign: 'center' }}>
           <h2 style={{ marginBottom: '2rem', fontSize: '2rem' }}>See it in action</h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', alignItems: 'center' }}>
-            <img 
-              src={import.meta.env.BASE_URL + "image1.png"} 
-              alt="DNS66 Client - Home" 
-              style={{ maxWidth: '100%', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.3)' }} 
-            />
-            <img 
-              src={import.meta.env.BASE_URL + "image2.png"} 
-              alt="DNS66 Client - Test AdBlock" 
-              style={{ maxWidth: '100%', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.3)' }} 
-            />
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
+            <div style={{ flex: '0 1 350px', maxWidth: '350px' }}>
+              <img 
+                src={import.meta.env.BASE_URL + "image1.png"} 
+                alt="DNS66 Client - Home" 
+                style={{ width: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', border: '1px solid var(--glass-border)' }} 
+              />
+            </div>
+            <div style={{ flex: '0 1 350px', maxWidth: '350px' }}>
+              <img 
+                src={import.meta.env.BASE_URL + "image2.png"} 
+                alt="DNS66 Client - Test AdBlock" 
+                style={{ width: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', border: '1px solid var(--glass-border)' }} 
+              />
+            </div>
           </div>
         </section>
 
