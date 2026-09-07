@@ -72,7 +72,7 @@ function App() {
             <p style={{ maxWidth: '100%', margin: '0' }}>
               A native, system-wide DNS Proxy and Adblocker. Immune to browser restrictions. Keep your entire desktop ad-free.
             </p>
-            <div style={{ marginTop: '2rem' }}>
+            <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
               <a href="https://github.com/rickeydas/dns66-linux" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                 <button className="btn-primary">
                   <Download size={20} />
@@ -158,7 +158,7 @@ function App() {
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
                   If you find this project useful, please consider supporting its development.
                 </p>
-                <a href="https://github.com/rickeydas/dns66-linux" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
+                <a href="https://github.com/rickeydas/dns66-linux#support-the-project-" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
                   Support the project →
                 </a>
               </div>
@@ -171,7 +171,7 @@ function App() {
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
                   DNS66 for Linux is completely open-source. We welcome issues, feature requests, and pull requests.
                 </p>
-                <a href="https://github.com/rickeydas/dns66-linux" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
+                <a href="https://github.com/rickeydas/dns66-linux#calling-all-contributors-" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
                   Contribute on GitHub →
                 </a>
               </div>
@@ -184,7 +184,7 @@ function App() {
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
                   Inspired by the original DNS66 for Android. Built with Python, dnslib, GTK, and React.
                 </p>
-                <a href="https://github.com/rickeydas/dns66-linux#credits" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
+                <a href="https://github.com/rickeydas/dns66-linux#credits--acknowledgements" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
                   View all credits →
                 </a>
               </div>
