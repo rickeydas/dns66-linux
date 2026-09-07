@@ -98,6 +98,11 @@ const AdblockTester = () => {
     score = Math.round((testStats.blocked / testStats.tested) * 100);
   }
 
+  let testProgress = 0;
+  if (testStats.total > 0) {
+    testProgress = (testStats.tested / testStats.total) * 100;
+  }
+
   let finalStatusClass = 'safe';
   if ((status === 'done' || status === 'stopped') && score < 50) {
     finalStatusClass = 'vulnerable';
@@ -136,7 +141,7 @@ const AdblockTester = () => {
 
       {(status === 'done' || status === 'stopped' || isRunning) && testStats.tested > 0 && (
         <div style={{ marginTop: '1.5rem', width: '100%', backgroundColor: 'rgba(255,255,255,0.1)', height: '8px', borderRadius: '4px', overflow: 'hidden' }}>
-          <div style={{ height: '100%', width: `${score}%`, backgroundColor: score >= 50 ? 'var(--status-safe-color, #10b981)' : 'var(--status-vulnerable-color, #ef4444)', transition: 'width 1s ease-in-out' }}></div>
+          <div style={{ height: '100%', width: `${testProgress}%`, backgroundColor: 'var(--accent-color)', transition: 'width 0.1s linear' }}></div>
         </div>
       )}
 

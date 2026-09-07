@@ -164,11 +164,68 @@ header p {
   100% { transform: scale(0.95); opacity: 0.5; }
 }
 
+/* Floating Navbar (Dynamic Island style) */
+html {
+  scroll-behavior: smooth;
+}
+
+.dynamic-navbar {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 10, 11, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dynamic-navbar:hover {
+  background: rgba(20, 20, 22, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateX(-50%) scale(1.02);
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .app-container {
-    padding: 2rem 1rem;
+    padding: 6rem 1rem 2rem; /* Added top padding to prevent navbar overlap */
     gap: 2.5rem;
+  }
+
+  .dynamic-navbar {
+    top: 1rem;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    width: 90%;
+    justify-content: space-between;
+  }
+  
+  .nav-link span {
+    display: none; /* Hide text on mobile, just show icons if any */
   }
 
   header h1 {

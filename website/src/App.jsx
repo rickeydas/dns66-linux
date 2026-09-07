@@ -22,149 +22,181 @@ const GithubIcon = ({ size = 24 }) => (
 
 function App() {
   return (
-    <div className="app-container">
-      <header style={{ position: 'relative' }}>
+    <>
+      <nav className="dynamic-navbar">
+        <a href="#" className="nav-link">
+          <img src={import.meta.env.BASE_URL + "dns66-icon.svg"} alt="DNS66" width="24" height="24" />
+          <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>DNS66</span>
+        </a>
+        <a href="#test" className="nav-link">
+          <ShieldCheck size={18} />
+          <span>Tester</span>
+        </a>
+        <a href="#features" className="nav-link">
+          <Zap size={18} />
+          <span>Features</span>
+        </a>
+        <a href="#support" className="nav-link">
+          <Heart size={18} />
+          <span>Support</span>
+        </a>
         <a 
           href="https://github.com/rickeydas/dns66-linux" 
           target="_blank" 
           rel="noopener noreferrer" 
-          style={{ position: 'absolute', top: '1rem', right: '1rem', color: 'var(--text-primary)' }}
+          className="nav-link"
           title="View on GitHub"
         >
-          <GithubIcon size={32} />
+          <GithubIcon size={18} />
+          <span>GitHub</span>
         </a>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginBottom: '1rem' }}>
-          <img src={import.meta.env.BASE_URL + "dns66-icon.svg"} alt="DNS66 Logo" width="64" height="64" />
-          <h1 style={{ margin: 0 }}>
-            DNS66 for <span className="gradient-text">Linux</span>
-          </h1>
+      </nav>
+
+      <div className="app-container" style={{ paddingTop: '6rem' }}>
+        <div className="hero-section" style={{ 
+          display: 'flex', 
+          flexWrap: 'wrap', 
+          alignItems: 'center', 
+          justifyContent: 'space-between',
+          gap: '2rem',
+          minHeight: 'calc(100vh - 12rem)',
+          paddingBottom: '2rem'
+        }}>
+          <header style={{ flex: '1 1 400px', textAlign: 'left', position: 'relative' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+              <img src={import.meta.env.BASE_URL + "dns66-icon.svg"} alt="DNS66 Logo" width="64" height="64" />
+              <h1 style={{ margin: 0 }}>
+                DNS66 for <span className="gradient-text">Linux</span>
+              </h1>
+            </div>
+            <p style={{ maxWidth: '100%', margin: '0' }}>
+              A native, system-wide DNS Proxy and Adblocker. Immune to browser restrictions. Keep your entire desktop ad-free.
+            </p>
+            <div style={{ marginTop: '2rem' }}>
+              <a href="https://github.com/rickeydas/dns66-linux" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <button className="btn-primary">
+                  <Download size={20} />
+                  Download Latest Release
+                </button>
+              </a>
+            </div>
+          </header>
+
+          <section id="test" style={{ flex: '1 1 400px', width: '100%' }}>
+            <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+              <AdblockTester />
+            </div>
+          </section>
         </div>
-        <p>
-          A native, system-wide DNS Proxy and Adblocker. Immune to browser restrictions. Keep your entire desktop ad-free.
-        </p>
-        <div style={{ marginTop: '2rem' }}>
-          <a href="https://github.com/rickeydas/dns66-linux" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-            <button className="btn-primary">
-              <Download size={20} />
-              Download Latest Release
-            </button>
-          </a>
-        </div>
-      </header>
 
-      <main style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
-        <section>
-          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-            <AdblockTester />
-          </div>
-        </section>
-
-        <section className="glass-panel" style={{ textAlign: 'center' }}>
-          <h2 style={{ marginBottom: '2rem', fontSize: '2rem' }}>See it in action</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
-            <div style={{ flex: '0 1 350px', maxWidth: '350px' }}>
-              <img 
-                src={import.meta.env.BASE_URL + "image1.png"} 
-                alt="DNS66 Client - Home" 
-                style={{ width: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', border: '1px solid var(--glass-border)' }} 
-              />
-            </div>
-            <div style={{ flex: '0 1 350px', maxWidth: '350px' }}>
-              <img 
-                src={import.meta.env.BASE_URL + "image2.png"} 
-                alt="DNS66 Client - Test AdBlock" 
-                style={{ width: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', border: '1px solid var(--glass-border)' }} 
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="glass-panel">
-          <h2 style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '2rem' }}>Why DNS66 Linux?</h2>
-          
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon">
-                <ShieldCheck size={24} />
+        <main style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
+          <section className="glass-panel" style={{ textAlign: 'center' }}>
+            <h2 style={{ marginBottom: '2rem', fontSize: '2rem' }}>See it in action</h2>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
+              <div style={{ flex: '0 1 350px', maxWidth: '350px' }}>
+                <img 
+                  src={import.meta.env.BASE_URL + "image1.png"} 
+                  alt="DNS66 Client - Home" 
+                  style={{ width: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', border: '1px solid var(--glass-border)' }} 
+                />
               </div>
-              <h3>Manifest V3 Immune</h3>
-              <p style={{ color: 'var(--text-secondary)' }}>
-                Unlike traditional browser extensions, DNS66 operates at the system level (`systemd-resolved`), making it completely immune to Chrome's new restrictive adblocking policies.
-              </p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon">
-                <Globe size={24} />
+              <div style={{ flex: '0 1 350px', maxWidth: '350px' }}>
+                <img 
+                  src={import.meta.env.BASE_URL + "image2.png"} 
+                  alt="DNS66 Client - Test AdBlock" 
+                  style={{ width: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', border: '1px solid var(--glass-border)' }} 
+                />
               </div>
-              <h3>System-Wide Blocking</h3>
-              <p style={{ color: 'var(--text-secondary)' }}>
-                Don't just block ads in your browser. Block tracking scripts, telemetry, and ads across all applications on your Linux desktop.
-              </p>
             </div>
+          </section>
 
-            <div className="feature-card">
-              <div className="feature-icon">
-                <Zap size={24} />
+          <section id="features" className="glass-panel">
+            <h2 style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '2rem' }}>Why DNS66 Linux?</h2>
+            
+            <div className="features-grid">
+              <div className="feature-card">
+                <div className="feature-icon">
+                  <ShieldCheck size={24} />
+                </div>
+                <h3>Manifest V3 Immune</h3>
+                <p style={{ color: 'var(--text-secondary)' }}>
+                  Unlike traditional browser extensions, DNS66 operates at the system level (`systemd-resolved`), making it completely immune to Chrome's new restrictive adblocking policies.
+                </p>
               </div>
-              <h3>Lightweight & Native</h3>
-              <p style={{ color: 'var(--text-secondary)' }}>
-                Built specifically for Linux. Low memory footprint, fast DNS resolution via `dnslib`, and a clean UI for managing your blocklists.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        <section className="glass-panel" style={{ marginTop: '2rem' }}>
-          <h2 style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '2rem' }}>Community & Support</h2>
-          
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon" style={{ backgroundColor: 'rgba(239, 68, 68, 0.1)', color: '#ef4444' }}>
-                <Heart size={24} />
+              <div className="feature-card">
+                <div className="feature-icon">
+                  <Globe size={24} />
+                </div>
+                <h3>System-Wide Blocking</h3>
+                <p style={{ color: 'var(--text-secondary)' }}>
+                  Don't just block ads in your browser. Block tracking scripts, telemetry, and ads across all applications on your Linux desktop.
+                </p>
               </div>
-              <h3>Donation</h3>
-              <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-                If you find this project useful, please consider supporting its development.
-              </p>
-              <a href="https://github.com/rickeydas/dns66-linux" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
-                Support the project →
-              </a>
-            </div>
 
-            <div className="feature-card">
-              <div className="feature-icon">
-                <GithubIcon size={24} />
+              <div className="feature-card">
+                <div className="feature-icon">
+                  <Zap size={24} />
+                </div>
+                <h3>Lightweight & Native</h3>
+                <p style={{ color: 'var(--text-secondary)' }}>
+                  Built specifically for Linux. Low memory footprint, fast DNS resolution via `dnslib`, and a clean UI for managing your blocklists.
+                </p>
               </div>
-              <h3>Contribution</h3>
-              <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-                DNS66 for Linux is completely open-source. We welcome issues, feature requests, and pull requests.
-              </p>
-              <a href="https://github.com/rickeydas/dns66-linux" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
-                Contribute on GitHub →
-              </a>
             </div>
+          </section>
 
-            <div className="feature-card">
-              <div className="feature-icon" style={{ backgroundColor: 'rgba(168, 85, 247, 0.1)', color: '#a855f7' }}>
-                <Code size={24} />
+          <section id="support" className="glass-panel" style={{ marginTop: '2rem' }}>
+            <h2 style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '2rem' }}>Community & Support</h2>
+            
+            <div className="features-grid">
+              <div className="feature-card">
+                <div className="feature-icon" style={{ backgroundColor: 'rgba(239, 68, 68, 0.1)', color: '#ef4444' }}>
+                  <Heart size={24} />
+                </div>
+                <h3>Donation</h3>
+                <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                  If you find this project useful, please consider supporting its development.
+                </p>
+                <a href="https://github.com/rickeydas/dns66-linux" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
+                  Support the project →
+                </a>
               </div>
-              <h3>Credits</h3>
-              <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-                Inspired by the original DNS66 for Android. Built with Python, dnslib, GTK, and React.
-              </p>
-              <a href="https://github.com/rickeydas/dns66-linux#credits" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
-                View all credits →
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
 
-      <footer style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '2rem 0' }}>
-        <p>Inspired by DNS66 for Android. Open Source and Free.</p>
-      </footer>
-    </div>
+              <div className="feature-card">
+                <div className="feature-icon">
+                  <GithubIcon size={24} />
+                </div>
+                <h3>Contribution</h3>
+                <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                  DNS66 for Linux is completely open-source. We welcome issues, feature requests, and pull requests.
+                </p>
+                <a href="https://github.com/rickeydas/dns66-linux" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
+                  Contribute on GitHub →
+                </a>
+              </div>
+
+              <div className="feature-card">
+                <div className="feature-icon" style={{ backgroundColor: 'rgba(168, 85, 247, 0.1)', color: '#a855f7' }}>
+                  <Code size={24} />
+                </div>
+                <h3>Credits</h3>
+                <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                  Inspired by the original DNS66 for Android. Built with Python, dnslib, GTK, and React.
+                </p>
+                <a href="https://github.com/rickeydas/dns66-linux#credits" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
+                  View all credits →
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '2rem 0' }}>
+          <p>Inspired by DNS66 for Android. Open Source and Free.</p>
+        </footer>
+      </div>
+    </>
   );
 }
 
