@@ -1,6 +1,6 @@
 import React from 'react';
 import AdblockTester from './components/AdblockTester';
-import { Download, ShieldCheck, Zap, Globe } from 'lucide-react';
+import { Download, ShieldCheck, Zap, Globe, Heart, Github, Code } from 'lucide-react';
 import './index.css';
 
 function App() {
@@ -62,6 +62,51 @@ function App() {
               <p style={{ color: 'var(--text-secondary)' }}>
                 Built specifically for Linux. Low memory footprint, fast DNS resolution via `dnslib`, and a clean UI for managing your blocklists.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="glass-panel" style={{ marginTop: '2rem' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '2rem' }}>Community & Support</h2>
+          
+          <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon" style={{ backgroundColor: 'rgba(239, 68, 68, 0.1)', color: '#ef4444' }}>
+                <Heart size={24} />
+              </div>
+              <h3>Donation</h3>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                If you find this project useful, please consider supporting its development.
+              </p>
+              <a href="https://github.com/rickeydas/dns66-linux" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
+                Support the project →
+              </a>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon">
+                <Github size={24} />
+              </div>
+              <h3>Contribution</h3>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                DNS66 for Linux is completely open-source. We welcome issues, feature requests, and pull requests.
+              </p>
+              <a href="https://github.com/rickeydas/dns66-linux" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
+                Contribute on GitHub →
+              </a>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon" style={{ backgroundColor: 'rgba(168, 85, 247, 0.1)', color: '#a855f7' }}>
+                <Code size={24} />
+              </div>
+              <h3>Credits</h3>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                Inspired by the original DNS66 for Android. Built with Python, dnslib, GTK, and React.
+              </p>
+              <a href="https://github.com/rickeydas/dns66-linux#credits" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
+                View all credits →
+              </a>
             </div>
           </div>
         </section>
