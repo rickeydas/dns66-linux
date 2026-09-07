@@ -4,9 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predev": "mkdir -p public && cp ../ad_domains.json public/ad_domains.json",
     "dev": "vite",
-    "prebuild": "mkdir -p public && cp ../ad_domains.json public/ad_domains.json",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview"
