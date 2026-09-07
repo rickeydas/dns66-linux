@@ -8,6 +8,9 @@
 
 A system-wide DNS Proxy and Adblocker designed natively for Linux, acting as a desktop port of the Android DNS66 app.
 
+**Website:** [https://rickeydas.github.io/dns66-linux/](https://rickeydas.github.io/dns66-linux/)
+
+
 > [!IMPORTANT]
 > **Why this project is more relevant than ever:** With Google Chrome's transition to **Manifest V3** heavily restricting traditional browser based adblockers, DNS66 provides a robust alternative. Because it operates as a system-wide DNS proxy, it is completely immune to browser extension restrictions, allowing you to seamlessly block ads and trackers across your entire system, regardless of the browser you use.
 

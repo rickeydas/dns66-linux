@@ -1,15 +1,44 @@
 import React from 'react';
 import AdblockTester from './components/AdblockTester';
-import { Download, ShieldCheck, Zap, Globe, Heart, Github, Code } from 'lucide-react';
+import { Download, ShieldCheck, Zap, Globe, Heart, Code } from 'lucide-react';
 import './index.css';
+
+const GithubIcon = ({ size = 24 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.02c3.18-.35 6.5-1.56 6.5-7.14a5.2 5.2 0 0 0-1.45-3.8 4.9 4.9 0 0 0-.1-3.72s-1.18-.37-3.88 1.4a13.3 13.3 0 0 0-7 0c-2.7-1.77-3.88-1.4-3.88-1.4a4.9 4.9 0 0 0-.1 3.72 5.2 5.2 0 0 0-1.45 3.8c0 5.57 3.3 6.79 6.47 7.14A4.8 4.8 0 0 0 6 18v4"></path>
+    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+  </svg>
+);
 
 function App() {
   return (
     <div className="app-container">
-      <header>
-        <h1>
-          DNS66 for <span className="gradient-text">Linux</span>
-        </h1>
+      <header style={{ position: 'relative' }}>
+        <a 
+          href="https://github.com/rickeydas/dns66-linux" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          style={{ position: 'absolute', top: '1rem', right: '1rem', color: 'var(--text-primary)' }}
+          title="View on GitHub"
+        >
+          <GithubIcon size={32} />
+        </a>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginBottom: '1rem' }}>
+          <img src={import.meta.env.BASE_URL + "dns66-icon.svg"} alt="DNS66 Logo" width="64" height="64" />
+          <h1 style={{ margin: 0 }}>
+            DNS66 for <span className="gradient-text">Linux</span>
+          </h1>
+        </div>
         <p>
           A native, system-wide DNS Proxy and Adblocker. Immune to browser restrictions. Keep your entire desktop ad-free.
         </p>
@@ -27,6 +56,22 @@ function App() {
         <section>
           <div style={{ maxWidth: '600px', margin: '0 auto' }}>
             <AdblockTester />
+          </div>
+        </section>
+
+        <section className="glass-panel" style={{ textAlign: 'center' }}>
+          <h2 style={{ marginBottom: '2rem', fontSize: '2rem' }}>See it in action</h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', alignItems: 'center' }}>
+            <img 
+              src={import.meta.env.BASE_URL + "image1.png"} 
+              alt="DNS66 Client - Home" 
+              style={{ maxWidth: '100%', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.3)' }} 
+            />
+            <img 
+              src={import.meta.env.BASE_URL + "image2.png"} 
+              alt="DNS66 Client - Test AdBlock" 
+              style={{ maxWidth: '100%', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.3)' }} 
+            />
           </div>
         </section>
 
@@ -85,7 +130,7 @@ function App() {
 
             <div className="feature-card">
               <div className="feature-icon">
-                <Github size={24} />
+                <GithubIcon size={24} />
               </div>
               <h3>Contribution</h3>
               <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
