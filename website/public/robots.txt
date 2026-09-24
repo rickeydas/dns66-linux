@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rickeydas.github.io/dns66-linux/sitemap.xml

@@ -64,7 +64,7 @@ function App() {
         }}>
           <header style={{ flex: '1 1 400px', textAlign: 'left', position: 'relative' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-              <img src={import.meta.env.BASE_URL + "dns66-icon.svg"} alt="DNS66 Logo" width="64" height="64" />
+              <img src={import.meta.env.BASE_URL + "dns66-icon.svg"} alt="DNS66 System-wide Adblocker Logo" width="64" height="64" fetchpriority="high" />
               <h1 style={{ margin: 0 }}>
                 DNS66 for <span className="gradient-text">Linux</span>
               </h1>
@@ -96,14 +96,16 @@ function App() {
               <div style={{ flex: '0 1 350px', maxWidth: '350px' }}>
                 <img 
                   src={import.meta.env.BASE_URL + "image1.png"} 
-                  alt="DNS66 Client - Home" 
+                  alt="DNS66 Linux system-wide adblocker desktop interface" 
+                  loading="lazy"
                   style={{ width: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', border: '1px solid var(--glass-border)' }} 
                 />
               </div>
               <div style={{ flex: '0 1 350px', maxWidth: '350px' }}>
                 <img 
                   src={import.meta.env.BASE_URL + "image2.png"} 
-                  alt="DNS66 Client - Test AdBlock" 
+                  alt="Testing the DNS66 adblocker against tracking domains" 
+                  loading="lazy"
                   style={{ width: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', border: '1px solid var(--glass-border)' }} 
                 />
               </div>
@@ -187,6 +189,25 @@ function App() {
                 <a href="https://github.com/rickeydas/dns66-linux#credits--acknowledgements" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
                   View all credits →
                 </a>
+              </div>
+            </div>
+          </section>
+
+          <section id="faq" className="glass-panel" style={{ marginTop: '2rem' }}>
+            <h2 style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '2rem' }}>Frequently Asked Questions</h2>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', maxWidth: '800px', margin: '0 auto' }}>
+              <div style={{ borderBottom: '1px solid var(--glass-border)', paddingBottom: '1rem' }}>
+                <h3 style={{ marginBottom: '0.5rem', fontSize: '1.25rem', color: 'var(--text-primary)' }}>How do I block ads on Linux without a browser extension?</h3>
+                <p style={{ color: 'var(--text-secondary)' }}>You can use a system-wide DNS adblocker like DNS66 for Linux. It runs a local DNS proxy that intercepts and blocks requests to known ad and tracking domains before they even reach your browser.</p>
+              </div>
+              <div style={{ borderBottom: '1px solid var(--glass-border)', paddingBottom: '1rem' }}>
+                <h3 style={{ marginBottom: '0.5rem', fontSize: '1.25rem', color: 'var(--text-primary)' }}>Is DNS66 for Linux immune to Manifest V3?</h3>
+                <p style={{ color: 'var(--text-secondary)' }}>Yes. Because DNS66 operates at the system level via systemd-resolved and not as a browser extension, it is completely unaffected by Google Chrome's Manifest V3 restrictions.</p>
+              </div>
+              <div>
+                <h3 style={{ marginBottom: '0.5rem', fontSize: '1.25rem', color: 'var(--text-primary)' }}>Does DNS66 work on Ubuntu and Fedora?</h3>
+                <p style={{ color: 'var(--text-secondary)' }}>Yes, DNS66 is designed as a native Linux application and works on major distributions like Ubuntu, Fedora, Debian, and Arch Linux.</p>
               </div>
             </div>
           </section>

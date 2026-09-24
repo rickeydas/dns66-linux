@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary Meta Tags -->
-    <title>DNS66 for Linux - System-Wide Adblocker & DNS Proxy</title>
-    <meta name="title" content="DNS66 for Linux - System-Wide Adblocker & DNS Proxy" />
-    <meta name="description" content="DNS66 for Linux is a native, lightweight system-wide DNS proxy and adblocker. Immune to Manifest V3 browser restrictions, it keeps your entire desktop ad-free." />
-    <meta name="keywords" content="dns66, linux, adblocker, dns proxy, manifest v3, system-wide adblock, tracker blocker, privacy, open source adblock, ubuntu adblock, fedora adblock" />
+    <title>DNS66 for Linux | Native System-Wide Adblocker & DNS Proxy</title>
+    <meta name="title" content="DNS66 for Linux | Native System-Wide Adblocker & DNS Proxy" />
+    <meta name="description" content="Block ads, trackers, and malware across your entire Linux desktop with DNS66. A free, open-source, system-wide DNS proxy and adblocker immune to Manifest V3 restrictions. Works on Ubuntu, Fedora, and Arch." />
+    <meta name="keywords" content="linux adblocker, system-wide adblock linux, dns proxy linux, manifest v3 alternative, ubuntu adblocker, fedora ad blocker, dns66 linux, block trackers linux, privacy tool linux, open source adblocker, pi-hole alternative" />
     <meta name="author" content="DNS66 Linux Contributors" />
     <meta name="theme-color" content="#1a1a2e" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -17,8 +17,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rickeydas.github.io/dns66-linux/" />
-    <meta property="og:title" content="DNS66 for Linux - System-Wide Adblocker" />
-    <meta property="og:description" content="Block ads seamlessly across your entire Linux system, regardless of the browser you use. Manifest V3 immune." />
+    <meta property="og:title" content="DNS66 for Linux | Native System-Wide Adblocker" />
+    <meta property="og:description" content="Block ads, trackers, and malware across your entire Linux desktop with DNS66. A free, open-source adblocker immune to Manifest V3." />
     <meta property="og:image" content="https://rickeydas.github.io/dns66-linux/image1.png" />
     <meta property="og:site_name" content="DNS66 for Linux" />
     <meta property="og:locale" content="en_US" />
@@ -26,32 +26,66 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://rickeydas.github.io/dns66-linux/" />
-    <meta property="twitter:title" content="DNS66 for Linux - System-Wide Adblocker" />
-    <meta property="twitter:description" content="Block ads seamlessly across your entire Linux system, regardless of the browser you use. Manifest V3 immune." />
+    <meta property="twitter:title" content="DNS66 for Linux | Native System-Wide Adblocker" />
+    <meta property="twitter:description" content="Block ads, trackers, and malware across your entire Linux desktop with DNS66. A free, open-source adblocker immune to Manifest V3." />
     <meta property="twitter:image" content="https://rickeydas.github.io/dns66-linux/image1.png" />
     
     <link rel="canonical" href="https://rickeydas.github.io/dns66-linux/" />
 
-    <!-- JSON-LD Structured Data for Software Application -->
+    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "DNS66 for Linux",
-      "operatingSystem": "Linux",
-      "applicationCategory": "UtilitiesApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DNS66 for Linux",
+        "operatingSystem": "Linux",
+        "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "Adblocker",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "A native, system-wide DNS Proxy and Adblocker for Linux desktops. Immune to Chrome Manifest V3 restrictions.",
+        "url": "https://rickeydas.github.io/dns66-linux/",
+        "installUrl": "https://github.com/rickeydas/dns66-linux/releases",
+        "author": {
+          "@type": "Person",
+          "name": "Rickey Das"
+        }
       },
-      "description": "A native, system-wide DNS Proxy and Adblocker for Linux desktops. Immune to Chrome Manifest V3 restrictions.",
-      "url": "https://rickeydas.github.io/dns66-linux/",
-      "author": {
-        "@type": "Person",
-        "name": "Rickey Das"
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I block ads on Linux without a browser extension?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can use a system-wide DNS adblocker like DNS66 for Linux. It runs a local DNS proxy that intercepts and blocks requests to known ad and tracking domains before they even reach your browser."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is DNS66 for Linux immune to Manifest V3?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Because DNS66 operates at the system level via systemd-resolved and not as a browser extension, it is completely unaffected by Google Chrome's Manifest V3 restrictions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does DNS66 work on Ubuntu and Fedora?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, DNS66 is designed as a native Linux application and works on major distributions like Ubuntu, Fedora, Debian, and Arch Linux."
+            }
+          }
+        ]
       }
-    }
+    ]
     </script>
   </head>
   <body>
