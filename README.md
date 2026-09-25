@@ -6,7 +6,7 @@
 
 ![DNS66 Client for Linux - Test AdBlock](image2.png)
 
-A system-wide DNS Proxy and Adblocker designed natively for Linux, acting as a desktop port of the Android DNS66 app.
+**DNS66 Client for Linux** is a free, open-source, system-wide DNS Proxy and Adblocker designed natively for Linux desktops. It intercepts DNS requests at the system level to block ads, trackers, and malware across all your applications and browsers. Acting as a desktop port of the Android DNS66 app, it serves as a powerful, Manifest V3-immune alternative to browser extensions.
 
 **Website:** [https://rickeydas.github.io/dns66-linux/](https://rickeydas.github.io/dns66-linux/)
 
@@ -19,6 +19,17 @@ A system-wide DNS Proxy and Adblocker designed natively for Linux, acting as a d
 - **Per-Host Rules:** Mark specific blocklists to act as "Allowlists" or "Ignore" them.
 - **Automatic Background Refresh:** Automatically updates the blocklists daily via a background timer.
 - **IPv6 Support & Watchdog:** Full IPv6 filtering support with self-recovery watchdog logic.
+
+## Frequently Asked Questions (FAQ)
+
+### What is DNS66 for Linux?
+DNS66 for Linux is a system-wide adblocker and DNS proxy. It blocks ads, trackers, and malware across your entire operating system by intercepting DNS requests locally before they reach the internet.
+
+### Is DNS66 immune to Chrome Manifest V3?
+Yes. Because DNS66 operates natively on your Linux system via `systemd-resolved` (and not as a browser extension), it is completely unaffected by Google Chrome's Manifest V3 restrictions.
+
+### How does DNS66 block ads without an extension?
+It runs a local DNS server on port 53. When an application tries to resolve an ad domain, DNS66 intercepts the request and returns `0.0.0.0` (a blocked connection) instead of the actual IP address.
 
 ## Installation
 

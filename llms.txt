@@ -1,0 +1,24 @@
+# DNS66 Client for Linux
+> A native system-wide DNS Proxy and Adblocker for Linux desktops.
+
+## What is this?
+DNS66 for Linux is a Python-based desktop application that provides system-wide ad and tracker blocking. It acts as a local DNS proxy, intercepting DNS requests and blocking those that match known ad/tracker host lists (like StevenBlack hosts). Because it operates at the DNS level (via systemd-resolved), it blocks ads across all applications, making it immune to browser restrictions like Chrome's Manifest V3.
+
+## Project Structure
+- `dns_proxy.py`: The core background service. It runs a local DNS server using `dnslib` and filters requests based on blocklists.
+- `ui.py`: The frontend GUI built with Tkinter. It manages blocklists and handles `pkexec` for elevated privileges to modify system DNS settings.
+- `tray.py`: The system tray applet for quick access.
+- `build_deb.sh`: Script to package the application for Debian-based systems.
+- `website/`: Contains the source code for the project's documentation and landing page.
+
+## Tech Stack
+- Python 3
+- `dnslib` for DNS handling
+- `tkinter` for the user interface
+- `systemd-resolved` integration for routing DNS traffic
+
+## Usage context for AI Agents
+When generating code or debugging for this project, remember:
+1. The UI components must interact securely with the proxy component. 
+2. The DNS proxy needs to run with root privileges to bind to port 53 and manage `systemd-resolved` configuration.
+3. Keep the code lightweight and adhere to standard Python practices.

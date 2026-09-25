@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+"""
+Core DNS Proxy Service for DNS66.
+
+This module acts as a local DNS server (listening on port 53). It intercepts DNS 
+queries, checks them against loaded blocklists, and either blocks them by returning 
+0.0.0.0 or forwards them to an upstream DNS provider.
+"""
 import json
 import os
 import socket
